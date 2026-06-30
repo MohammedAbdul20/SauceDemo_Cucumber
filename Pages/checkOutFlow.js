@@ -151,12 +151,16 @@ class checkOutFlow{
 
     async getTax(){
         let taxamt = await this.CheckOuttax.innerText();
-        return parseFloat(taxamt.replace("Tax: $",""));
+        return parseFloat(
+            parseFloat(taxamt.replace("Tax: $", "")).toFixed(2)
+        );
     }
 
     async getTotal(){
-        let totalamt = await this.CheckOuttotal.innerText();
-        return parseFloat(totalamt.replace("Total: $",""));
+        let totalamt = await this.CheckOuttotal.innerText();  
+        return parseFloat(
+                parseFloat(totalamt.replace("Total: $", "")).toFixed(2)
+        );
     }
 
     async Completeorder(){
