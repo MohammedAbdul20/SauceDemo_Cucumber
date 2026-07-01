@@ -67,7 +67,7 @@ When("I verify tax , total amount", async function(){
     total = await this.CheckOutFLow.getTotal();
     console.log(total);
 
-    await expect(prices + tax).toBe(total);
+    await expect(parseFloat((prices + tax).toFixed(2))).toBe(total);
 });
 
 Then("I Complete the purchase to verify success info", async function(){
