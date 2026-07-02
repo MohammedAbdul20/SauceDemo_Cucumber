@@ -35,17 +35,6 @@ class checkOutFlow{
         this.BackHome = page.locator(Locators.backHomeBtn);
 
     }
-
-    // async select2Products(){
-     
-    //     let random1 = Math.floor(Math.random() * 5) + 1;
-    //     let random2 = Math.floor(Math.random() * 6);
-
-    //     await this.addtocart.nth(random1).click();
-    //     await this.addtocart.nth(random2).click();
-
-    // }
-
     
     async select2Products(n = 2) {
         const count = await this.addtocart.count();
