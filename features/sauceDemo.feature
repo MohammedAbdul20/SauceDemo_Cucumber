@@ -1,5 +1,6 @@
 Feature: SauceDemo Application
 
+@smoke
 @validLogin
 @logininventory
 Scenario: Verify Login and Product Inventory Details
@@ -19,6 +20,7 @@ Scenario: Verify Adding Multiple Products to Cart
     And I verify the cart bagde displays three
     Then I reload the page to see if the data is retained
 
+@smoke
 @validLogin
 @cartRemoveFunc
 Scenario: Verify Cart Details and Remove Product Functionality
@@ -79,6 +81,7 @@ Scenario: Verify Cart Persistence During Navigation
     And I verify the cart Count remains unchanged
     Then I validate the selected products still show the remove button
 
+@smoke
 @validLogin
 @checkcancelflow
 Scenario: Verify Checkout Cancellation Flow
@@ -90,6 +93,7 @@ Scenario: Verify Checkout Cancellation Flow
     And I checkout again but cancel it on the overview page
     Then I check if the cart data is retained
 
+@critical
 @validLogin
 @FunctionalityVerify
 Scenario: Verify Hamburger Menu, Reset App State, and Logout Functionality
