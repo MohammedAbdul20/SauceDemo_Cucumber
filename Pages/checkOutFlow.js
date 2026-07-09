@@ -50,39 +50,6 @@ class checkOutFlow{
         }
     }
 
-
-    // async GetNames(){
-
-    //     let names =[];
-    //     let count = await this.Items.count();
-
-    //     for(let i = 0; i < count; i++){
-    //         //const item = this.Items.nth(i);
-
-    //         if(await this.removeButton.count() > 0){
-    //             names.push(await this.itemName.nth(i).innerText());
-    //         }
-    //     }
-    //     return names;
-    // }
-
-    // async GetPrices(){
-
-    //     let prices =[];
-    //     let count = await this.Items.count();
-
-    //     for(let i = 0; i < count; i++){
-    //         const item = this.Items.nth(i);
-
-    //         if(await this.removeButton.isVisible()){
-    //             let price = await this.itemPrice.innerText()
-    //             prices.push(parseFloat(price.replace(/[$,]/g, '')));
-    //         }
-    //     }
-    //     return prices;
-    // }
-
-    
     async GetPrices() {
         const prices = [];
         const count = await this.Items.count();

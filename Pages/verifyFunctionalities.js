@@ -103,11 +103,6 @@ class verifyFunctionalities{
         return count;
     }
 
-    // async verifyCartbuttons(){
-
-    //     await this.CartBadge
-    // }
-
     async Logoutfunction(){
 
         await this.HamburgerMenu.click();
